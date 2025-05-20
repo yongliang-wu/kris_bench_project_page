@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -43,6 +44,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="./static/js/leaderboard_testmini.js"></script>  
 </head>
 <body>
 
@@ -132,42 +134,276 @@
             Recent advances in multi-modal generative models have enabled significant progress in instruction-based image editing. However, while these models produce visually plausible outputs, their capacity for knowledge-based reasoning editing tasks remains under-explored. In this paper, We introduce <b>KRIS-Bench</b> (<b>K</b>nowledge-based <b>R</b>easoning in <b>I</b>mage-editing <b>S</b>ystems <b>Bench</b>mark), a diagnostic benchmark designed to assess models through a cognitively informed lens. Drawing from educational theory, KRIS-Bench categorizes editing tasks across three foundational knowledge types: <i>Factual</i>, <i>Conceptual</i>, and <i>Procedural</i>. Based on this taxonomy, we design 22 representative tasks spanning 7 reasoning dimensions and release 1,267 high-quality annotated editing instances. To support fine-grained evaluation, we propose a comprehensive protocol that incorporates a novel <i>Knowledge Plausibility</i> metric, enhanced by knowledge hints and calibrated through human studies. Empirical results on nine state-of-the-art models reveal significant gaps in reasoning performance, highlighting the need for knowledge-centric benchmarks to advance the development of intelligent image editing systems.
           </p>
         </div>
+        <div class="content has-text-centered">
+          <img src="static/images/teaser.png" alt="KRIS-Bench Overview" class="img-fluid" style="max-width: 100%;">
+        </div>
       </div>
     </div>
   </div>
 </section>
 <!-- End paper abstract -->
 
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
+<!-- Leaderboard Section -->
+<section class="section">
   <div class="container">
+    
     <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+      <div class="column is-full has-text-centered content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+        <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+        <div class="content">
+          <p class="mt-3">Performance scores on KRIS-Bench are presented across three knowledge types: Factual, Conceptual, and Procedural, along with their corresponding reasoning dimensions.
           </p>
 
+          <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto;">
+            <thead>
+              <tr>
+                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 50px;" data-js-sort-colNum="none"><strong>#</strong></th>
+                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 180px;" data-js-sort-colNum="none"><strong>Model</strong></th>
+                <th colspan="4" style="vertical-align: middle;" data-js-sort-colNum="3"><strong>Factual Knowledge</strong></th>
+                <th colspan="3" style="vertical-align: middle;" data-js-sort-colNum="7"><strong>Conceptual Knowledge</strong></th>
+                <th colspan="3" style="vertical-align: middle;" data-js-sort-colNum="10"><strong>Procedural Knowledge</strong></th>
+                <th rowspan="2" style="vertical-align: middle;" data-js-sort-colNum="13"><strong>Overall Score</strong></th>
+              </tr>
+              <tr>
+                <th data-js-sort-colNum="2"><strong>Attribute Perception</strong></th>
+                <th data-js-sort-colNum="3"><strong>Spatial Perception</strong></th>
+                <th data-js-sort-colNum="4"><strong>Temporal Perception</strong></th>
+                <th data-js-sort-colNum="5"><strong>Average Score</strong></th>
+                <th data-js-sort-colNum="6"><strong>Social Science</strong></th>
+                <th data-js-sort-colNum="7"><strong>Natural Science</strong></th>
+                <th data-js-sort-colNum="8"><strong>Average Score</strong></th>
+                <th data-js-sort-colNum="9"><strong>Logical Reasoning</strong></th>
+                <th data-js-sort-colNum="10"><strong>Instruction Decomposition</strong></th>
+                <th data-js-sort-colNum="11"><strong>Average Score</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="vertical-align: middle;">1</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">GPT-4o</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">OpenAI</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">83.17</td>
+                <td style="vertical-align: middle;">79.08</td>
+                <td style="vertical-align: middle;">68.25</td>
+                <td style="vertical-align: middle;">79.80</td>
+                <td style="vertical-align: middle;">85.50</td>
+                <td style="vertical-align: middle;">80.06</td>
+                <td style="vertical-align: middle;">81.37</td>
+                <td style="vertical-align: middle;">71.56</td>
+                <td style="vertical-align: middle;">85.08</td>
+                <td style="vertical-align: middle;">78.32</td>
+                <td style="vertical-align: middle;">80.09</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">2</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">Gemini 2.0</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">Google</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">66.33</td>
+                <td style="vertical-align: middle;">63.33</td>
+                <td style="vertical-align: middle;">63.92</td>
+                <td style="vertical-align: middle;">65.26</td>
+                <td style="vertical-align: middle;">68.19</td>
+                <td style="vertical-align: middle;">56.94</td>
+                <td style="vertical-align: middle;">59.65</td>
+                <td style="vertical-align: middle;">54.13</td>
+                <td style="vertical-align: middle;">71.67</td>
+                <td style="vertical-align: middle;">62.90</td>
+                <td style="vertical-align: middle;">62.41</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">3</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">Doubao</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">ByteDance</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">70.92</td>
+                <td style="vertical-align: middle;">59.17</td>
+                <td style="vertical-align: middle;">40.58</td>
+                <td style="vertical-align: middle;">63.30</td>
+                <td style="vertical-align: middle;">65.50</td>
+                <td style="vertical-align: middle;">61.19</td>
+                <td style="vertical-align: middle;">62.23</td>
+                <td style="vertical-align: middle;">47.75</td>
+                <td style="vertical-align: middle;">60.58</td>
+                <td style="vertical-align: middle;">54.17</td>
+                <td style="vertical-align: middle;">60.70</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">4</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">OmniGen</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">BAAI</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">37.92</td>
+                <td style="vertical-align: middle;">28.25</td>
+                <td style="vertical-align: middle;">21.83</td>
+                <td style="vertical-align: middle;">33.11</td>
+                <td style="vertical-align: middle;">30.63</td>
+                <td style="vertical-align: middle;">27.19</td>
+                <td style="vertical-align: middle;">28.02</td>
+                <td style="vertical-align: middle;">11.94</td>
+                <td style="vertical-align: middle;">35.83</td>
+                <td style="vertical-align: middle;">23.89</td>
+                <td style="vertical-align: middle;">28.85</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">5</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">Emu2</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">BAAI</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">51.50</td>
+                <td style="vertical-align: middle;">48.83</td>
+                <td style="vertical-align: middle;">22.17</td>
+                <td style="vertical-align: middle;">45.40</td>
+                <td style="vertical-align: middle;">34.69</td>
+                <td style="vertical-align: middle;">38.44</td>
+                <td style="vertical-align: middle;">37.54</td>
+                <td style="vertical-align: middle;">24.81</td>
+                <td style="vertical-align: middle;">45.00</td>
+                <td style="vertical-align: middle;">34.91</td>
+                <td style="vertical-align: middle;">39.70</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">5</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">Step1X-Edit</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">StepFun</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">55.50</td>
+                <td style="vertical-align: middle;">51.75</td>
+                <td style="vertical-align: middle;">0.00</td>
+                <td style="vertical-align: middle;">45.52</td>
+                <td style="vertical-align: middle;">44.69</td>
+                <td style="vertical-align: middle;">49.06</td>
+                <td style="vertical-align: middle;">48.01</td>
+                <td style="vertical-align: middle;">40.88</td>
+                <td style="vertical-align: middle;">22.75</td>
+                <td style="vertical-align: middle;">31.82</td>
+                <td style="vertical-align: middle;">43.29</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">5</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">AnyEdit</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">ZJU</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">47.67</td>
+                <td style="vertical-align: middle;">45.17</td>
+                <td style="vertical-align: middle;">0.00</td>
+                <td style="vertical-align: middle;">39.26</td>
+                <td style="vertical-align: middle;">38.56</td>
+                <td style="vertical-align: middle;">42.94</td>
+                <td style="vertical-align: middle;">41.88</td>
+                <td style="vertical-align: middle;">36.56</td>
+                <td style="vertical-align: middle;">26.92</td>
+                <td style="vertical-align: middle;">31.74</td>
+                <td style="vertical-align: middle;">38.55</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">5</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">MagicBrush</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">OSU</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">53.92</td>
+                <td style="vertical-align: middle;">39.58</td>
+                <td style="vertical-align: middle;">0.00</td>
+                <td style="vertical-align: middle;">41.84</td>
+                <td style="vertical-align: middle;">42.94</td>
+                <td style="vertical-align: middle;">38.06</td>
+                <td style="vertical-align: middle;">39.24</td>
+                <td style="vertical-align: middle;">30.00</td>
+                <td style="vertical-align: middle;">23.08</td>
+                <td style="vertical-align: middle;">26.54</td>
+                <td style="vertical-align: middle;">37.15</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle;">5</td>
+                <td style="text-align: left; padding: 2px 10px;">
+                  <b class="">
+                    <a href="#" class="ext-link" style="font-size: 16px; margin-left: 5px;">InstructPix2Pix</a>
+                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">UCB</p>
+                  </b>
+                </td>
+                <td style="vertical-align: middle;">30.33</td>
+                <td style="vertical-align: middle;">21.33</td>
+                <td style="vertical-align: middle;">0.00</td>
+                <td style="vertical-align: middle;">23.33</td>
+                <td style="vertical-align: middle;">22.56</td>
+                <td style="vertical-align: middle;">26.56</td>
+                <td style="vertical-align: middle;">25.59</td>
+                <td style="vertical-align: middle;">19.81</td>
+                <td style="vertical-align: middle;">14.75</td>
+                <td style="vertical-align: middle;">17.28</td>
+                <td style="vertical-align: middle;">22.82</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Leaderboard visualization -->
+          <div class="content has-text-centered">
+            <img src="static/images/radar.png" alt="Leaderboard Comparison" class="img-fluid" style="max-width: 90%; margin-top: 20px;">
+          </div>
+          <div style="margin-top: 20px;">
+            <p style="text-align: left; font-size: 14px;">
+              <strong>Note:</strong> If you would like to submit your results, please contact us at 
+              <a href="mailto:yongliang0223@gmail.com">yongliang0223@gmail.com</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</footer>
+</section>
+<!-- End Leaderboard Section -->
+
+<!-- Benchmark Examples Section -->
+<section class="hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Benchmark Examples</h2>
+        <div class="content has-text-centered">
+          <img src="static/images/examples.png" alt="KRIS-Bench Method" class="img-fluid" style="max-width: 100%;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method Section -->
+
+
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
 
 <!-- Statcounter tracking code -->
   
